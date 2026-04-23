@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Political Prediction Bingo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        .bingo-card {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px auto;
+            width: 300px;
+        }
+        .cell {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .marked {
+            background-color: #ffcc00;
+        }
+        button {
+            margin-top: 20px;
+        }
+        .stamp {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2026 Political Prediction Bingo</h1>
+    <div class="bingo-card" id="bingoCard">\n        <div class="cell">Prediction 1</div>\n        <div class="cell">Prediction 2</div>\n        <div class="cell">Prediction 3</div>\n        <div class="cell">Prediction 4</div>\n        <div class="cell">Prediction 5</div>\n        <div class="cell">Prediction 6</div>\n        <div class="cell">Prediction 7</div>\n        <div class="cell">Prediction 8</div>\n        <div class="cell">Prediction 9</div>\n        <div class="cell">Prediction 10</div>\n        <div class="cell">Prediction 11</div>\n        <div class="cell">Prediction 12</div>\n        <div class="cell">Free Space</div>\n        <div class="cell">Prediction 13</div>\n        <div class="cell">Prediction 14</div>\n        <div class="cell">Prediction 15</div>\n        <div class="cell">Prediction 16</div>\n        <div class="cell">Prediction 17</div>\n        <div class="cell">Prediction 18</div>\n        <div class="cell">Prediction 19</div>\n        <div class="cell">Prediction 20</div>\n        <div class="cell">Prediction 21</div>\n        <div class="cell">Prediction 22</div>\n        <div class="cell">Prediction 23</div>\n        <div class="cell">Prediction 24</div>\n    </div>
+    <img src="path/to/custom-orange-wood-carved-stamp.svg" alt="Stamp" class="stamp">
+    <button onclick="resetBingo()">Reset</button>
+    <script>
+        const cells = document.querySelectorAll('.cell');
+        const bingoCard = document.getElementById('bingoCard');
+
+        cells.forEach(cell => {
+            cell.addEventListener('click', () => {
+                cell.classList.toggle('marked');
+                checkBingo();
+            });
+        });
+
+        function resetBingo() {
+            cells.forEach(cell => cell.classList.remove('marked'));
+        }
+
+        function checkBingo() {
+            // TODO: Implement bingo checking logic here
+            alert('Bingo check not implemented.');
+        }
+    </script>
+</body>
+</html>
